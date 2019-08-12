@@ -77,7 +77,7 @@ $doctrineModuleConfig['dependencies']['factories']['doctrine.cli'] = function(\I
     return $cli;
 };
 
-$doctrineOrmModuleConfig = require_once $vendorPath . '/doctrine/doctrine-orm-module/config/module.config.php';
+$doctrineOrmModuleConfig = include($vendorPath . '/doctrine/doctrine-orm-module/config/module.config.php');
 $doctrineOrmModuleConfig['dependencies'] = $doctrineOrmModuleConfig['service_manager'];
 unset($doctrineOrmModuleConfig['service_manager']);
 
